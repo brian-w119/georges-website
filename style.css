@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+.header > img {
+  width: 30%;
+  height: 12vh;
+  margin-top: 2vh;
+}
+
+.header {
+  height: 15vh;
+
+  height: 15vh;
+}
+
+.header > .nav-elements {
+  display: flex;
+  justify-content: space-around;
+  width: 40vw;
+  margin-left: 5vw;
+  position: absolute;
+  left: 40vw;
+  top: 7vh;
+  font-size: larger;
+}
+
+.main-section {
+  background-color: grey;
+  margin-top: 10vh;
+  height: 60vh;
+  width: 100%;
+}
+
+.main-section > * {
+  height: 60vh;
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: black;
+}
+
+nav a:hover {
+  color: red;
+  transform: scale(1.2);
+}
