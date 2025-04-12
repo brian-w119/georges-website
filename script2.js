@@ -1,6 +1,6 @@
 const about = document.querySelector(".about");
 
-const text = `If it has electricity flowing through it, we can probably fix it.
+const text = `If it has electricity flowing through it, we can fix it.
 The founder of Power Tronic Innovation is degree qualified in Electrical
 Engineering, and has extensive hands on experience in the repair of a
 variety of electrical/electronic systems.

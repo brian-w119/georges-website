@@ -20,8 +20,8 @@
   width: 40vw;
   margin-left: 5vw;
   position: absolute;
-  left: 40vw;
-  top: 7vh;
+  right: 3vw;
+  top: 3vh;
   font-size: x-large;
 }
 
@@ -29,13 +29,13 @@
   background-color: grey;
   margin-top: 10vh;
   height: 50vh;
-  width: 100vw;
+  width: 98vw;
   display: flex;
   justify-content: space-between;
 }
 
 .main-section > img {
-  max-width: 25vw;
+  max-width: 24vw;
   height: auto;
   display: block;
   margin: 0 auto 0 auto;
@@ -65,13 +65,14 @@ p {
   background-color: grey;
 }
 
+/*
 .visible {
   opacity: 0; /* Start invisible */
-  animation: fadeInOut 1s ease-in-out infinite; /* Apply the fadeInOut animation */
-}
+/*animation: fadeInOut 1s ease-in-out infinite; /* Apply the fadeInOut animation */
+/*}
 
 /* Define the fade-in and fade-out animation */
-@keyframes fadeInOut {
+/*@keyframes fadeInOut {
   0% {
     opacity: 0;
   }
@@ -82,6 +83,15 @@ p {
     opacity: 0;
   }
 }
+  */
+
+.main-section > img {
+  margin-right: 1vw;
+}
+
+.main-section > .visible4 {
+  margin-right: 0;
+}
 
 .about {
   width: 40vw;
@@ -91,4 +101,17 @@ p {
   margin-top: 20vh;
   color: white;
   font-size: x-large;
+}
+
+address > * {
+  color: blue;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: red;
+    .main-section > img {
+      width: 30vw;
+    }
+  }
 }
