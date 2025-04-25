@@ -2,6 +2,8 @@ const siteScript = {
   main: document.querySelector(".main-section"),
   about: document.querySelector("about"),
   header: document.querySelector("header"),
+  popover: document.querySelector("my-popover"),
+  body: document.querySelector("body"),
 
   images: (image) => {
     const img = document.createElement("img");
@@ -12,7 +14,7 @@ const siteScript = {
   init: function () {
     const image1 = this.images("./images/power-tronic1.png");
     const image2 = this.images("./images/image6.png");
-    const image3 = this.images("./images/image3.png");
+    const image3 = this.images("./images/solar-system-inst.png");
     const image5 = this.images("./images/image5.png");
 
     const imageArr = [image5, image1, image2, image3];
@@ -72,17 +74,24 @@ const siteScript = {
           this.main.style.width = "50vw";
           this.main.appendChild(image);
           // image.classList.remove("visible"); // cancels the fade in/ fade out effect
-          i === 3 ? console.log(imageArr[i]) : "";
-        }, 1600 * i);
+        }, 800 * i);
       }
     };
-    if (window.innerWidth > 480) {
-      console.log("Inner width > 480 px");
-      renderImg();
-    } else {
-      console.log("Inner width < 480 px");
-      renderImg2();
-    }
+
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        if (window.innerWidth > 480) {
+          //checks whether window is larger than mobile/cell phones
+          console.log("Inner width > 480 px");
+          renderImg();
+        } else {
+          console.log("Inner width < 480 px");
+          renderImg2();
+        }
+      }, 2000);
+      //
+      this.body.style.backgroundColor = "blue";
+    });
   },
 };
 
