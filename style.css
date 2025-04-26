@@ -193,12 +193,15 @@ address > * {
     margin-right: auto;
   }
 
-  .nav-elements {
-    margin-top: 3vh;
+  .header {
+    display: flex;
+    height: auto;
+    margin: 0 auto;
   }
 
-  .nav-elements > * {
-    margin-bottom: 1vh;
+  .nav-elements {
+    position: absolute;
+    top: 20vh;
   }
 
   .main-section {
@@ -216,39 +219,38 @@ address > * {
     margin-bottom: 5vh;
   }
 
-  .header {
-    /* display: block; */
-    margin: 0 auto;
-  }
-  .contact {
-    position: absolute;
-    top: 30vh;
-  }
   .header > .nav-elements {
     position: absolute;
     top: 3vh;
-    left: 0;
+    left: 10vw;
     top: 15vh;
     font-size: auto;
+    width: 10vw;
   }
 
   .contact {
     font-size: smaller;
-    width: auto;
+    width: 40vw;
     position: absolute;
     left: 30vw;
     right: 30vw;
-    margin-top: -7vh;
+    margin-top: 15vh;
   }
 
   .main-section {
-    margin-top: 17vh;
+    margin-top: 2vh;
   }
   .header > .nav-elements {
-    /*background-color: white;*/
+    margin-top: 8vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18vh;
+    max-width: max-content;
   }
   .nav-elements > a {
     font-size: small;
+    margin-right: 5vw;
   }
 
   nav :hover {
@@ -267,6 +269,36 @@ address > * {
   .header > img {
     opacity: 0;
     animation: fadeIn 15s forwards;
+  }
+  .contact > .mail > img,
+  .contact > .phone > img {
+    width: 5vw;
+    margin-right: 1vw;
+  }
+
+  .contact {
+    margin-bottom: 5vh;
+  }
+  .text2 {
+    width: auto;
+    height: auto;
+    background-color: green;
+    margin-top: 5vh;
+    font-size: small;
+    margin-bottom: -15vh;
+    margin-left: 0;
+  }
+  .main-section {
+    display: block;
+    margin-top: 25vh;
+  }
+  .text2 {
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+    position: absolute;
+    top: 30vh;
+    margin-bottom: 10vh;
+    height: auto;
   }
 }
 
@@ -330,4 +362,9 @@ address > * {
   margin-top: 10vh;
   margin-left: auto;
   margin-right: auto;
+}
+
+.header2 > img {
+  width: 30vw;
+  height: auto;
 }

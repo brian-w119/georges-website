@@ -1,8 +1,8 @@
 const siteScript = {
   main: document.querySelector(".main-section"),
-  about: document.querySelector("about"),
   header: document.querySelector("header"),
-  popover: document.querySelector("my-popover"),
+  about: document.querySelector(".about"),
+
   body: document.querySelector("body"),
 
   images: (image) => {
@@ -21,35 +21,31 @@ const siteScript = {
 
     //renders images for mobile phones
     const renderImg2 = () => {
-      /* for (let i = 0; i < 4; i++) {
-        this.main.innerHTML = null;
-        this.main.style.width = "50vw";
-        let image = imageArr[i];
-        image.classList.add(`visible2${i + 1}`);
-        this.main.appendChild(image);
-        setTimeout(() => {
-          this.main.innerHTML = null;
-        }, 1200);
-      }
-        */
-      /* this.main.innerHTML = null;
-      this.main.style.width = "24.5vw";
-      this.main.style.height = "auto";
-      let image = image1;
-      image.classList.add("visible2");
-      this.main.appendChild(image);
-    
-      }
-      */
-
       const intro =
         "At Power Tronic Innovation, problems are our forte'. Thinking out the box to provide a bespoke solution to electrical gremlins is our forte'.";
-      //the below two lines of code removes the larger image logo, and adds a smaller one when viewed in mobile format
+
+      // removes the intro text and adds it back due to styling issues
+      const thirdChild =
+        this.body.firstElementChild.nextElementSibling.nextElementSibling;
+      this.body.removeChild(thirdChild);
+      const text = document.createElement("p");
+      text.classList.add("text2");
+      text.innerHTML = intro;
+      const child3 =
+        this.body.firstElementChild.nextElementSibling.nextElementSibling;
+
+      //positionsthe newly added intro text
+      this.body.insertBefore(text, child3);
+
+      //text.style.opacity = "0";
+      text.style.leftanimation = "fadeIn(52 forwards)";
+
       const firstChild = this.header.firstElementChild;
       this.header.removeChild(firstChild);
       const newChild = this.images("./images/image7.png");
-      this.header.appendChild(newChild);
       newChild.classList.add("image-logo");
+      //this.header.appendChild(newChild);
+      this.header.insertBefore(newChild, this.header.firstChild);
 
       this.main.style.width = "24.5vw";
       this.main.style.height = "auto";
@@ -64,7 +60,6 @@ const siteScript = {
         }, 2600 * i);
       }
     };
-    // renderImg2();
 
     const renderImg = () => {
       for (let i = 0; i < 4; i++) {
@@ -78,20 +73,11 @@ const siteScript = {
       }
     };
 
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        if (window.innerWidth > 480) {
-          //checks whether window is larger than mobile/cell phones
-          console.log("Inner width > 480 px");
-          renderImg();
-        } else {
-          console.log("Inner width < 480 px");
-          renderImg2();
-        }
-      }, 2000);
-      //
-      this.body.style.backgroundColor = "blue";
-    });
+    if (window.innerWidth < 480) {
+      renderImg2();
+    } else {
+      renderImg();
+    }
   },
 };
 
