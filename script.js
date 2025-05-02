@@ -2,13 +2,18 @@ const siteScript = {
   main: document.querySelector(".main-section"),
   header: document.querySelector("header"),
   about: document.querySelector(".about"),
-
+  aboutLink: document.querySelector(".aboutLink"),
   body: document.querySelector("body"),
 
   images: (image) => {
     const img = document.createElement("img");
     img.src = image;
     return img;
+  },
+
+  removeHeader: () => {
+    const firstChild = this.header.firstElementChild;
+    this.header.removeChild(firstChild);
   },
 
   init: function () {
@@ -19,10 +24,18 @@ const siteScript = {
 
     const imageArr = [image5, image1, image2, image3];
 
+    //changes the logo for the about page to the smaller logo when in mobile/cell phone viewing format
+    const changeImg = () => {
+      this.aboutLink.addEventListener("click", () => {
+        alert("ok");
+        this.header.removeChild(this.aboutLink);
+      });
+    };
+
     //renders images for mobile phones
     const renderImg2 = () => {
       const intro =
-        "At Power Tronic Innovation, problems are our forte'. Thinking out the box to provide a bespoke solution to electrical gremlins is our forte'.";
+        " Welcome to Power Tronic Innovation. Thinking outside the box to provide a bespoke solution to your technical gremlins is our forte'.";
 
       // removes the intro text and adds it back due to styling issues
       const thirdChild =
@@ -57,7 +70,7 @@ const siteScript = {
           //this.main.style.width = "50vw";
           this.main.appendChild(image);
           // image.classList.remove("visible"); // cancels the fade in/ fade out effect
-        }, 2600 * i);
+        }, 1000 * i);
       }
     };
 

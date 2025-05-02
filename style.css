@@ -132,10 +132,9 @@ p {
 .about {
   width: 40vw;
   min-height: 10vh;
-  background-color: grey;
   margin: 0 auto 0 auto;
   margin-top: 20vh;
-  color: white;
+  color: blue;
   font-size: x-large;
 }
 
@@ -251,6 +250,11 @@ address > * {
   .nav-elements > a {
     font-size: small;
     margin-right: 5vw;
+  }
+
+  .nav-elements :hover {
+    color: blue;
+    transform: scale(1.2);
   }
 
   nav :hover {

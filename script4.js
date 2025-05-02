@@ -1,8 +1,8 @@
-/*const image1 = this.images("./images/power-tronic1.png");
-const image2 = this.images("./images/image6.png");
-const image3 = this.images("./images/solar-system-inst.png");
-const image5 = this.images("./images/image5.png");
+const removeChild = () => {
+  const firstChild = this.header.firstElementChild;
+  this.header.removeChild(firstChild);
+  const newChild = this.images("./images/image7.png");
+  newChild.classList.add("image-logo");
+};
 
-const imageArr = [image5, image1, image2, image3];
-export default imageArr;
-*/
+export default removeChild;
