@@ -12,6 +12,11 @@ if (window.innerWidth < 480) {
   header.appendChild(img);
 }
 
+if (window.innerWidth < 480) {
+  const headerLine = document.querySelector("hr");
+  headerLine.remove();
+}
+
 const about = document.querySelector(".about");
 
 const text = `If it has electricity flowing through it, we can fix it.
@@ -34,9 +39,11 @@ const typeWriter = () => {
 };
 typeWriter();
 
+/*
 if (innerWidth < 480) {
   const img2 = document.createElement("img");
   img2.src = "./images/gradImg.png";
   img2.classList.add("grad-img");
   setTimeout(() => document.body.appendChild(img2), 5000);
 }
+  */

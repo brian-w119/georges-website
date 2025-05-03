@@ -91,6 +91,14 @@ const siteScript = {
     } else {
       renderImg();
     }
+    //removes rogue duplicate paragraph
+    if (innerWidth < 480) {
+      const rogueText = document.querySelector(".text");
+      rogueText.remove();
+
+      const headerLine = document.querySelector("hr");
+      headerLine.remove();
+    }
   },
 };
 

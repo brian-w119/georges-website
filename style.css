@@ -30,7 +30,17 @@ body {
 
 .header > * {
   opacity: 0;
-  animation: fadeIn 5s forwards;
+  animation: fadeIn 10s forwards;
+}
+
+.footer-img {
+  opacity: 0;
+  animation: fadeIn 10s forwards;
+}
+
+.header-line {
+  opacity: 0;
+  animation: fadeIn 25s forwards;
 }
 
 .contact {
@@ -192,6 +202,12 @@ address > * {
     margin-right: auto;
   }
 
+  .header-line {
+    position: absolute;
+    top: 28vh;
+    margin-bottom: 2vh;
+  }
+
   .header {
     display: flex;
     height: auto;
@@ -240,11 +256,10 @@ address > * {
     margin-top: 2vh;
   }
   .header > .nav-elements {
-    margin-top: 8vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 18vh;
+    margin-top: 15vh;
     max-width: max-content;
   }
   .nav-elements > a {
@@ -265,7 +280,7 @@ address > * {
   body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(white, #dacdcd);
+    background: linear-gradient(white, #dbd1d1);
   }
   .company-info {
     color: #222;
@@ -282,11 +297,11 @@ address > * {
 
   .contact {
     margin-bottom: 5vh;
+    margin-top: 12.5vh;
   }
   .text2 {
     width: auto;
     height: auto;
-    background-color: green;
     margin-top: 5vh;
     font-size: small;
     margin-bottom: -15vh;
@@ -303,6 +318,16 @@ address > * {
     top: 30vh;
     margin-bottom: 10vh;
     height: auto;
+    width: 80vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .about {
+    margin-top: 12vh;
+    width: 60vw;
+    margin-bottom: 1vh;
+    color: black;
+    font-size: medium;
   }
 }
 
@@ -371,4 +396,20 @@ address > * {
 .header2 > img {
   width: 30vw;
   height: auto;
+}
+
+.footer-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20vw;
+  height: n auto;
+  margin-top: 10vh;
+}
+
+.header-line {
+  border: none;
+  height: 2px;
+  background-color: black;
+  width: 100vw;
 }
